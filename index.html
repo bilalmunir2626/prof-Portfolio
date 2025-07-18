@@ -9,19 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <!-- <script src="main.js"></script> -->
     <!-- fav icon  -->
-
-  <!-- Remove the leading slashes -->
-<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="favicon.svg" />
-<link rel="shortcut icon" href="favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="MyWebSite" />
-<link rel="manifest" href="site.webmanifest" />
-
-
-
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="site.webmanifest" />
 </head>
 
 <body>
@@ -76,19 +70,14 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <!-- <div class="image-container"> -->
-                    <!-- Placeholder for profile image -->
-                    <!-- <div class="profile-image-placeholder"> -->
-                    <!-- <i class="fas fa-user"></i> -->
-                    <img src="bill.png" alt="">
-                    <!-- </div> -->
-                    <!-- </div> -->
+                    <img src="bill.png" alt="Bilal Munir">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
+    <!-- ==== CHANGED: Added 'hidden-on-scroll' class ==== -->
+    <section id="about" class="about hidden-on-scroll">
         <div class="container">
             <div class="section-header">
                 <h2>About Me</h2>
@@ -97,10 +86,8 @@
             <div class="about-content">
                 <div class="about-image">
                     <div class="image-container">
-                        <!-- Placeholder for about image -->
                         <div class="about-image-placeholder">
-                            <!-- <i class="fas fa-user-circle"></i> -->
-                            <img src="image.jpg" alt="">
+                            <img src="image.jpg" alt="About Me Image">
                         </div>
                     </div>
                 </div>
@@ -136,7 +123,8 @@
         </div>
     </section>
 
-    <section id="skills" class="skills">
+    <!-- ==== CHANGED: Added 'hidden-on-scroll' class ==== -->
+    <section id="skills" class="skills hidden-on-scroll">
         <div class="container">
             <div class="section-header">
                 <h2>My Skills</h2>
@@ -213,7 +201,8 @@
         </div>
     </section>
 
-    <section id="portfolio" class="portfolio">
+    <!-- ==== CHANGED: Added 'hidden-on-scroll' class ==== -->
+    <section id="portfolio" class="portfolio hidden-on-scroll">
         <div class="container">
             <div class="section-header">
                 <h2>My Work</h2>
@@ -316,35 +305,18 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="portfolio-item" data-category="ui">
-                    <div class="portfolio-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-credit-card"></i>
-                        </div>
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>Payment System UI</h3>
-                                <p>UI/UX Design</p>
-                                <div class="portfolio-links">
-                                    <a href="#" class="portfolio-link"><i class="fas fa-link"></i></a>
-                                    <a href="https://github.com/bilalmunir2626" class="portfolio-link"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
 
-   <section id="contact" class="contact">
+    <!-- ==== CHANGED: Added 'hidden-on-scroll' class ==== -->
+    <section id="contact" class="contact hidden-on-scroll">
         <div class="container">
             <div class="section-header">
                 <h2>Contact Me</h2>
                 <div class="underline"></div>
             </div>
             <div class="contact-content">
-                <!-- Left Side: Contact Info -->
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="contact-icon">
@@ -353,7 +325,8 @@
                         <div class="contact-text">
                             <h3>Phone</h3>
                             <p>+923095800532</p>
-                            <a href="https://wa.me/923095800532" style="display:flex; align-items:center; font-size: 1.3rem; text-decoration: none; color: var(--text-light); margin-top: 1rem;">
+                            <a href="https://wa.me/923095800532"
+                                style="display:flex; align-items:center; font-size: 1.3rem; text-decoration: none; color: var(--text-light); margin-top: 1rem;">
                                 <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 2.5rem;"></i>
                                 <span style='font-size:1.6rem; margin-left: 1rem;'>click here for chatting</span>
                             </a>
@@ -380,15 +353,42 @@
                     <div class="contact-social">
                         <h3>Follow Me</h3>
                         <div class="social-links">
-                            <a href="https://github.com/bilalmunir2626" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/muhammad-bilal-68880a296" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://www.instagram.com/randhawa.biilal" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/bilalmunir2626" aria-label="GitHub" target="_blank"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/muhammad-bilal-68880a296" aria-label="LinkedIn"
+                                target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/randhawa.biilal" aria-label="Instagram"
+                                target="_blank"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
-                </section>
-               
-    <!-- footer starts from here  -->
+                <form action="https://formsubmit.co/bilalmunir2626@gmail.com" method="POST" class="modern-form">
+
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" class="form-control" placeholder=" " required>
+                        <label for="name">Your Name</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-control" placeholder=" " required>
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder=" ">
+                        <label for="phone">Phone Number </label>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="message" name="message" class="form-control" placeholder=" " required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+
+                </form>
+            </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
@@ -401,8 +401,8 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
-    <script src = "main.js"></script>
+    <!-- This script link was commented out, I'm assuming you will create/use it -->
+    <script src="main.js"></script>
 
 </body>
 

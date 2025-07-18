@@ -981,3 +981,144 @@ margin-left: 1rem;
 .skill-item:nth-child(2) { animation-delay: 0.4s; }
 .skill-item:nth-child(3) { animation-delay: 0.6s; }
 .skill-item:nth-child(4) { animation-delay: 0.8s; }
+
+
+/* contact form styling */
+
+      /* :root {
+            --primary-color: #5e17eb;
+            --border-color: #d1d5db;
+            --text-color: #111827;
+            --label-color: #6b7280;
+            --background-color: #f3f4f6; /* A light grey for the page body */
+            /* --focus-shadow: 0 0 0 3px rgba(94, 23, 235, 0.2); */
+         */
+
+        /* Basic body styling to center the form */
+        /* body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            margin: 0;
+            box-sizing: border-box;
+        } */
+
+        /* The main form container with a modern card style */
+        .modern-form {
+            /* background-color: white; */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            /* box-sizing: border-box; */
+        }
+
+        /* * This is a wrapper for each input/label pair.
+         * position: relative is crucial for the absolute positioning of the label.
+        */
+        .form-group {
+            position: relative;
+            margin-bottom: 35px; /* Increased margin for better spacing */
+        }
+
+        /* Styling for the input and textarea fields */
+        .form-control {
+            width: 100%;
+            padding: 14px;
+            font-size: 1rem;
+            color: var(--text-color);
+            background-color: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            box-sizing: border-box;
+        }
+
+        /* * The floating label. It starts inside the input area.
+         * pointer-events: none allows you to click "through" the label onto the input.
+        */
+        .form-group label {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: var(--label-color);
+            pointer-events: none;
+            transition: all 0.2s ease-in-out;
+             background-color: transparent; /*This makes it look like it "cuts" through the border */
+            padding: 0 5px;
+        }
+
+        /* --- THE FLOATING ANIMATION --- */
+        /* This CSS rule is the core of the animation. */
+        /* It triggers when the input is focused OR when it's not empty. */
+        .form-control:focus ~ label,
+        .form-control:not(:placeholder-shown) ~ label {
+            top: -10px; /* Move the label up */
+            left: 10px;
+            background-color: white;
+            font-size: 1.4rem;
+            color: var(--primary-color); /* Change color on float */
+        }
+
+        /* Add a focus ring/shadow to the input for better accessibility */
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: var(--focus-shadow);
+        }
+
+        /* * We hide the actual placeholder text. The <label> acts as our placeholder.
+         * A single space ' ' is used to enable the :not(:placeholder-shown) selector.
+        */
+        .form-control::placeholder {
+            color: transparent;
+        }
+        
+        /* Specific styling for the textarea to allow vertical resizing */
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Modern styling for the submit button */
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #4c12bc; /* A slightly darker shade for hover */
+            transform: translateY(-2px); /* A subtle lift effect on hover */
+        }
+
+        /* scroll animation  */
+
+        /* --- Scroll Animation --- */
+
+/* This is the initial, hidden state of the element */
+.hidden-on-scroll {
+  opacity: 0;
+  transform: translateY(100px); /* Starts 50px below its final position */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform; /* Performance optimization */
+}
+
+/* This class is added by JavaScript to make the element visible */
+.visible {
+  opacity: 1;
+  transform: translateY(0); /* Moves to its original position */
+}

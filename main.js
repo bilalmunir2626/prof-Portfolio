@@ -174,3 +174,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// scroll animatin script 
+// Wait for the DOM to be fully loaded before running the script
+document.addEventListener("DOMContentLoaded", function() {
+
+  // --- SCROLL REVEAL ANIMATION ---
+  
+  // Select all elements with the 'hidden-on-scroll' class
+  const animatedElements = document.querySelectorAll('.hidden-on-scroll');
+
+  // Set up the Intersection Observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // If the element is in the viewport (i.e., visible on screen)
+      if (entry.isIntersecting) {
+        // Add the 'visible' class to trigger the animation
+        entry.target.classList.add('visible');
+        // Stop observing the element once it has become visible
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    // This option means the animation will start when the element is 10% visible
+    threshold: 0.1 
+  });
+
+  // Tell the observer to watch each of the animated elements
+  animatedElements.forEach(element => {
+    observer.observe(element);
+  });
+
+  // --- OTHER SCRIPTS FROM YOUR main.js CAN GO HERE ---
+  // For example, your theme toggle or mobile menu logic.
+  
+});
