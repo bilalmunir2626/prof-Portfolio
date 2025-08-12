@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Your Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .thank-you-container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .thank-you-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .thank-you-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .checkmark-circle {
+            width: 80px;
+            height: 80px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 25px;
+            animation: scaleIn 0.5s ease-out;
+        }
+
+        .checkmark {
+            color: white;
+            font-size: 40px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .message {
+            font-size: 18px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .details {
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .home-button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .home-button i {
+            margin-right: 8px;
+        }
+
+        .home-button:hover {
+            background-color: #1a252f;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animations */
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            80% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .thank-you-card {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .message {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="thank-you-card">
+            <div class="checkmark-circle">
+                <i class="fas fa-check checkmark"></i>
+            </div>
+            <h1>Thank You!</h1>
+            <p class="message">Your message has been successfully sent. We will get back to you shortly.</p>
+            <div class="details">
+                <p>In the meantime, you can explore more of our website or check out our latest updates.</p>
+            </div>
+            <button id="homeButton" class="home-button">
+                <i class="fas fa-home"></i> Back to Home
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Back to Home button functionality
+    const homeButton = document.getElementById('homeButton');
+
+    homeButton.addEventListener('click', function() {
+        // Replace with your actual home page URL
+        window.location.href = 'index.html'; // or '/' for root
+    });
+
+    // Optional: Add animation when button is clicked
+    homeButton.addEventListener('mousedown', function() {
+        this.style.transform = 'translateY(0)';
+    });
+
+    homeButton.addEventListener('mouseup', function() {
+        this.style.transform = 'translateY(-2px)';
+    });
+
+    // Optional: Add confetti effect for celebration
+    // You would need a confetti library for this
+    // Example: https://www.npmjs.com/package/canvas-confetti
+});
+    </script>
+</body>
+</html>
